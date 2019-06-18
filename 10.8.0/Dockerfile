@@ -65,7 +65,7 @@ COPY docker-entrypoint.sh /usr/local/bin/
 
 RUN npm config set registry http://registry.npm.taobao.org
 RUN npm install -g webpack webpack-dev-server yarn
-COPY /usr/local/lib/node_modules/ /node_modules.bak/
+ADD /usr/local/lib/node_modules/ /node_modules.bak/
 
 ENTRYPOINT ["docker-entrypoint.sh"]
 
